@@ -6,12 +6,12 @@ import android.support.v7.app.ActionBarActivity;
 
 public class QuotesListActivity extends ActionBarActivity {
 
-	
- @Override
-protected void onCreate(Bundle savedInstanceState) {
-	super.onCreate(savedInstanceState);
-	setContentView(R.layout.activity_quotes_list);
-}
-	
-	
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_quotes_list);
+	}
+
+
 }
