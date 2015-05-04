@@ -7,8 +7,9 @@
     <ListView
         android:id="@+id/quotesListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-        
+        android:layout_height="match_parent"
+        android:divider="@color/white"
+        android:listSelector="@drawable/list_activator_style"/>      
     
 
 </LinearLayout>

@@ -4,5 +4,16 @@
     <string name="app_name">QuotesList</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <string name="splash_text">Motivational\r\nQuotes</string>
+    
+    <string name="previous">Click to see previous quote</string>
+    <string name="next">Click to see next quote</string>
+    <string name="home">Click to see list of quote</string>
+    
+    <string name="audio">audio</string>
+    
+    <string name="quote_title">Quote</string>
+    <string name="quotelist_title">Quotes List</string>
 
 </resources>
