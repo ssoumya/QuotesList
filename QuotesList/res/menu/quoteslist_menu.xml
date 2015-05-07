@@ -8,5 +8,11 @@
         android:title="@string/audio"
         app:showAsAction="always">
     </item>
+    <item
+        android:id="@+id/action_list_mute_speaker"
+        android:icon="@drawable/ic_action_volume_muted"
+        android:title="@string/cancel_audio"
+        app:showAsAction="always">
+    </item>
 
 </menu>

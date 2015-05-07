@@ -16,7 +16,7 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="80sp"
         android:text="@string/splash_text" />
 
 </RelativeLayout>

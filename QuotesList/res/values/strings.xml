@@ -12,6 +12,8 @@
     <string name="home">Click to see list of quote</string>
     
     <string name="audio">audio</string>
+    <string name="cancel_audio">cancel audio</string>
+    <string name="share_quote">share quote</string>
     
     <string name="quote_title">Quote</string>
     <string name="quotelist_title">Quotes List</string>

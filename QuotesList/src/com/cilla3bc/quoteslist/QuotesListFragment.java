@@ -1,10 +1,11 @@
 package com.cilla3bc.quoteslist;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Locale;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import android.speech.tts.TextToSpeech;
@@ -29,7 +30,6 @@ public class QuotesListFragment extends Fragment{
 	private FragmentOnClickListener mCallback;
 	public static TextToSpeech mQuoteToSpeech;
 	private ArrayList<String> mQuotesList;
-	private boolean mQuotesListSpeaker;
 	private int mIndex;
 	private String mQuote;
 
@@ -44,17 +44,13 @@ public class QuotesListFragment extends Fragment{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
-		setHasOptionsMenu(true);
-		((QuotesListActivity) getActivity()).setActionBarTitle(getResources().getString(R.string.quotelist_title));
+		setHasOptionsMenu(true);		
 	}
 
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		super.onCreateOptionsMenu(menu, inflater);
-		if (mQuotesListSpeaker == false) {
-			inflater.inflate(R.menu.quoteslist_menu, menu);
-			mQuotesListSpeaker = true;
-		}
+		inflater.inflate(R.menu.quoteslist_menu, menu);
 	}
 
 	@Override
@@ -63,7 +59,12 @@ public class QuotesListFragment extends Fragment{
 		if (itemId == R.id.action_list_speaker) {
 			onSpeak();
 			return true;
-		} else {
+		} 
+		else if(itemId == R.id.action_list_mute_speaker){
+			stopSpeaker();
+			return true;
+		}
+		else {
 			return super.onOptionsItemSelected(item);
 		}
 	}
@@ -73,6 +74,7 @@ public class QuotesListFragment extends Fragment{
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 		View rootView = inflater.inflate(R.layout.quotes_list_fragment, container, false);
+		((QuotesListActivity) getActivity()).setActionBarTitle(getResources().getString(R.string.quotelist_title));
 
 		mQuotesListView = (ListView)rootView.findViewById(R.id.quotesListView);
 		mQuotesListView.setBackgroundColor(getResources().getColor(R.color.black));
@@ -83,6 +85,8 @@ public class QuotesListFragment extends Fragment{
 
 		mQuotesListView.setAdapter(mAdapter);
 
+		unLockScreenOrientation();
+
 		//Initialize the text to speech listener
 		mQuoteToSpeech = new TextToSpeech(getActivity(), 
 				new TextToSpeech.OnInitListener() {
@@ -90,7 +94,7 @@ public class QuotesListFragment extends Fragment{
 			public void onInit(int status) {
 				if(status != TextToSpeech.ERROR){
 					mQuoteToSpeech.setLanguage(Locale.US);
-					
+
 				}				
 			}
 		});
@@ -112,27 +116,34 @@ public class QuotesListFragment extends Fragment{
 
 	}
 	private void onClickListView(){
-		
+
 		mBundle = new Bundle();
 		mBundle.putInt("INDEX", mIndex);
 		mBundle.putString("QUOTE", mQuote);
 		mQuoteFragment = new QuoteFragment();
 		mQuoteFragment.setArguments(mBundle);
 		mCallback.fragmentOnClickCallBack(mQuoteFragment);
-		
+
 	}	
-	
+
 	@SuppressWarnings("deprecation")
 	private void onSpeak(){
-		 HashMap<String, String> myHash = new HashMap<String, String>();		 
-		 myHash.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "done");
-		 
+		// lock screen orientation to avoid canceling the text to speech(audio)
+		lockScreenOrietation();		
 		for(String quote: mQuotesList)			
 		{
 			mQuoteToSpeech.speak(quote, TextToSpeech.QUEUE_ADD, null);
 			//play silence the Text To Speech for 3 seconds for every quote
 			mQuoteToSpeech.playSilence(3000, TextToSpeech.QUEUE_ADD, null);
-		}		
+		}	
+	}
+
+	private void stopSpeaker(){		
+		if(mQuoteToSpeech != null){
+			mQuoteToSpeech.stop();
+		}
+		// unlock the screen orientation on onStop audio
+		unLockScreenOrientation();
 	}
 
 	@Override
@@ -145,6 +156,22 @@ public class QuotesListFragment extends Fragment{
 	public void onDestroy() {
 		super.onDestroy();
 		mQuoteToSpeech.stop();
-	}	
+	}
+
+	private void lockScreenOrietation(){
+
+		int currentOrientation = getResources().getConfiguration().orientation;
+		if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+			getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+		} 
+		else { 
+			getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+		} 		
+	}
+
+	private void unLockScreenOrientation(){
+		getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+	}
 
 }
+

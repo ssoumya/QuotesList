@@ -4,14 +4,12 @@ package com.cilla3bc.quoteslist;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
@@ -22,32 +20,34 @@ public class QuotesListActivity extends ActionBarActivity implements FragmentOnC
 	protected Button mPreviousBtn;
 	protected Button mHomeBtn;
 	private String[] mQuotesArray;
-	public static ArrayList mQuotesList;
-	
+	public static ArrayList<String> mQuotesList;
+
 	protected QuotesListFragment mListFragment;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_quotes_list);
-		
+
 		mQuotesArray = getResources().getStringArray(R.array.testArray);
-		mQuotesList = new ArrayList(Arrays.asList(mQuotesArray));
-		
+		mQuotesList = new ArrayList<String>(Arrays.asList(mQuotesArray));
+
 		mContentFrame = (FrameLayout)findViewById(R.id.content_frame);
 
-		if(mListFragment == null)
-		commitListFragment();		
+		if(savedInstanceState == null){
+			commitListFragment();
+		}
+
 	}
-	
+
 	protected void setActionBarTitle(String title){
 		getSupportActionBar().setTitle(title);
 	}
 	private void commitListFragment(){
-		
+
 		mListFragment = new QuotesListFragment();
 		commitFragment(mListFragment);
-		
+
 	}
 	private boolean commitFragment(Fragment fragment) {
 		FragmentManager fragmentManager = getSupportFragmentManager();

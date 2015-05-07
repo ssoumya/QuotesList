@@ -12,7 +12,7 @@
         android:gravity="center"
         android:padding="20dip"
         android:textColor="@android:color/white"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -27,7 +27,6 @@
             android:layout_centerInParent="true"
             android:padding="20dip" 
             android:contentDescription="@string/home" 
-            android:background="@android:color/black"
             android:src="@drawable/ic_action_view_as_list"/>
 
         <ImageButton
@@ -38,7 +37,6 @@
             android:padding="20dip"
             android:layout_marginRight="10dip"
             android:contentDescription="@string/previous" 
-            android:background="@android:color/black"
             android:src="@drawable/ic_action_previous_item" />
 
         <ImageButton
@@ -49,7 +47,6 @@
             android:padding="20dip"
             android:layout_marginLeft="10dip"
             android:contentDescription="@string/next" 
-            android:background="@android:color/black"
             android:src="@drawable/ic_action_next_item" />
     </RelativeLayout>
 
