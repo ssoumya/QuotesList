@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_list_speaker"
+        android:icon="@drawable/ic_speaker"
+        android:title="@string/audio"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/action_list_mute_speaker"
+        android:icon="@drawable/ic_action_volume_muted"
+        android:title="@string/cancel_audio"
+        app:showAsAction="always">
+    </item>
+
+</menu>

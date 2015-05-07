@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="testArray">
+        <!-- one -->
+        <item>"\"Success usually comes to those who are too busy to be looking for it."\"\r\n-Henry David Thoreau</item>
+        <item>"\"I've failed over and over and over again in my life and that is why I succeed."\"\r\n-Michael Jordan</item>
+        <item>"\"Opportunities don't happen. You create them."\"\r\n-Chris Grosser</item>
+        <item>"\"Desire is the key to motivation, but it's determination and commitment to an unrelenting pursuit of your goal   a commitment to excellence   that will enable you to attain the success you seek."\"\r\n-Mario Andretti</item>
+        <item>"\"Success is the sum of small efforts, repeated day-in and day-out."\"\r\n-Robert Collier</item>
+        
+        <!-- two -->
+        <item>"\"It is better to conquer yourself than to win a thousand battles. Then the victory is yours. It cannot be taken from you, not by angels or by demons, heaven or hell."\"\r\n-Buddha</item>
+        <item>"\"Always do your best. What you plant now, you will harvest later."\"\r\n-Og Mandino</item>
+        <item>"\"In order to succeed, we must first believe that we can."\"\r\n-Nikos Kazantzakis</item>
+        <item>"\"You are never too old to set another goal or to dream a new dream."\"\r\n-C. S. Lewis</item>
+        <item>"\"Expect problems and eat them for breakfast."\"\r\nAlfred A. Montapert</item>
+        
+        <!-- three -->
+        <item>"\"Problems are not stop signs, they are guidelines."\"\r\n-Robert H.Schuller</item>
+        <item>"\"You are never too old to set another goal or to dream a new dream."\"\r\n-C.S.Lewis</item>
+        <item>"\"Be grateful for what you have and stop complaining   it bores everybody else, does you no good, and doesn't solve any problems."\"\r\n-Zig Ziglar</item>
+        <item>"\"Choose a job you love, and you will never have to work a day in your life."\"\r\n-Confucius</item>
+        <item>"\"Strength and growth come only through continuous effort and struggle."\"\r\n-Napoleon Hill</item>
+        
+        <!-- four -->
+        <item>"\"Life isn't about finding yourself. Life is about creating yourself."\"\r\n-George Bernard Shaw</item>
+        <item>"\"We do not remember days, we remember moments."\"\r\n-Cesare Pavese</item>
+        <item>"\"The greatest test of courage on earth is to bear defeat without losing heart."\"\r\n-Robert Green Ingersoll</item>
+        <item>"\"Bravery is the capacity to perform properly even when scared half to death."\"\r\n-Omar N.Bradley</item>
+        <item>"\"Thinking will not overcome fear but action will."\"\r\n-W.Clement Stone</item>
+        
+        <!-- five -->
+        <item>"\"Put your heart, mind, and soul into even your smallest acts. This is the secret of success."\"\r\n-Swami Sivananda</item>
+        <item>"\"We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow that never leaves."\"\r\n-Buddha</item>
+        <item>"\"If you can dream it, you can do it."\"\r\n-Walt Disney</item>
+        <item>"\"Look at the sky. We are not alone. The whole universe is friendly to us and conspires only to give the best to those who dream and work."\"\r\n-A. P. J. Abdul Kalam</item>
+        <item>"\"Start where you are. Use what you have. Do what you can."\"\r\n-Arthur Ashe</item>
+        
+        <!-- six -->
+        <item>"\"Just know, when you truly want success, you’ll never give up on it. No matter how bad the situation may get."\"\r\n-Unknown</item>
+        <item>"\"Challenges are what make life interesting and overcoming them is what makes life meaningful."\"\r\n-Joshua J.Marine</item>
+        <item>"\"Its hard to wait around for something you know might never happen; but its harder to give up when you know its everything you want."\"\r\n-Unknown</item>
+        <item>"\"For it is easy to criticize and break down the spirit of others, but to know yourself takes a lifetime."\"\r\n-Bruce Lee</item>
+        <item>"\"Self confidence is the most attractive quality a person can have. how can anyone see how awesome you are if you can’t see it yourself?."\"\r\n-Unknown</item>
+        
+        <!-- seven -->
+        <item>"\"Motivation is what gets you started. Habit is what keeps you going."\"\r\n-Jim Rohn</item>
+        <item>"\"The biggest failure you can have in life is making the mistake of never trying at all."\"\r\n-UnKnown</item>
+        <item>"\"We may encounter defeat, but we must not be defeated."\"\r\n-Tsem Tulku Rinpoche</item>
+        <item>"\"Mistakes are always forgivable, if one has the courage to admit them."\"\r\n-Bruce Lee</item>
+        <item>"\"If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse."\"\r\n-Jim Rohn</item>
+        
+        <!-- eight -->
+        <item>"\"Don’t worry about failures, worry about the chances you miss when you don’t even try."\"\r\n-Jack Canfield</item>
+        <item>"\"Though no one can go back and make a brand new start, anyone can start from now and make a brand new ending."\"\r\n-Carl Bard</item>
+        <item>"\"No one is going to hand me success. I must go out and get it myself. That’s why I’m here. To dominate. To conquer. Both the world, and myself."\"\r\n-Unknown</item>
+        <item>"\"If you don’t design your own life plan, chances are you’ll fall into someone else’s plan. And guess what they have planned for you? Not much."\"\r\n-Jim Rohn</item>
+        <item>"\"Courage is not doing something in the absence of fear but knowing that something else is more important than fear. So we do it."\"\r\n-Tsem Tulku Rinpoche</item>
+        
+        <!--  nine -->
+        <item>"\"If you believe it will work out , you’ll see opportunities. If you believe it won’t you will see obstacles."\"\r\n-Wayne Dyer</item>
+        <item>"\"To conquer oneself is a greater task than conquering others."\"\r\n-Buddha</item>
+        <item>"\"We are still masters of our fate. We are still captains of our souls."\"\r\n-Winston Churchill.</item>
+        <item>"\"He who hesitates is lost."\"\r\n-Unknown</item>
+        <item>"\"No matter how many mistakes you make or how slow you progress, you are still way ahead of everyone who isn’t trying."\"\r\n-Tony Robbins</item>
+        
+        <!-- ten -->
+                
+        <item>"\"Winners lose much more often than losers. So if you keep losing but you’re still trying, keep it up! You’re right on track."\"\r\n-Matthew Keith Groves</item>
+        <item>"\"In order to succeed, your desire for success should be greater than your fear of failure."\"\r\n-Bill Cosby</item>
+        <item>"\"Fear is a habit; so is self-pity, defeat, anxiety, despair, hopelessness and resignation. You can eliminate all of these negative habits with two simple resolves: I can! and I will!"\"\r\n-Unknown</item>
+        <item>"\"The pain you feel today is the strength you feel tomorrow. For every challenge encountered there is opportunity for growth."\"\r\n-Unknown</item>
+        <item>"\"I believe there’s an inner power that makes winners or losers. And the winners are the ones who really listen to the truth of their hearts."\"\r\n-Sylvester Stallone</item>   
+        
+    </string-array>
+
+</resources>

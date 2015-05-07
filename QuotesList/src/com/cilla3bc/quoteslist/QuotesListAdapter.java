@@ -1,7 +1,6 @@
 package com.cilla3bc.quoteslist;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,7 +19,7 @@ public class QuotesListAdapter extends BaseAdapter{
 		mContext = context;
 		mQuotesList = quotesList;
 
-		mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		mInflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
 	@Override
@@ -45,9 +44,8 @@ public class QuotesListAdapter extends BaseAdapter{
 		ViewHolder holder;
 		
 		if(convertView ==  null){
-			
-			holder = new ViewHolder();
 			view = mInflater.inflate(R.layout.list_row_layout, null);
+			holder = new ViewHolder();
 			holder.quoteRow = (TextView)view.findViewById(R.id.quoteRow); 
 			
 			view.setTag(holder);
@@ -66,13 +64,13 @@ public class QuotesListAdapter extends BaseAdapter{
 			holder.quoteRow.setText(mQuotesList.get(position));
 		}
 		
-		
 		return view;
 	}
 
 	public static class ViewHolder {
 
 		public TextView quoteRow;
+		
 	}
 
 }
